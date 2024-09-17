@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/ground.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 128.5, 28 )
+
+[node name="ground" type="StaticBody2D"]
+position = Vector2( 1, 160 )
+script = ExtResource( 2 )
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2( 128.5, -28 )
+shape = SubResource( 1 )
+
+[node name="bottom_right" type="Position2D" parent="."]
+position = Vector2( 168, 0 )
